@@ -1,0 +1,59 @@
+:root {
+  --bg: #f4f9ff;
+  --bg-soft: #eaf2ff;
+  --text: #143866;
+  --subtext: #4f6f97;
+  --border: rgba(96, 141, 204, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(188, 214, 255, 0.8), transparent 30%),
+    radial-gradient(circle at 85% 80%, rgba(207, 226, 255, 0.75), transparent 34%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+}
+
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.message {
+  padding: 36px 42px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 16px 40px rgba(104, 145, 204, 0.14);
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.4rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+p {
+  margin: 16px 0 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--subtext);
+}
+
+@media (max-width: 640px) {
+  .message {
+    padding: 24px 22px;
+  }
+}
